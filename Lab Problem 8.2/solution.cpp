@@ -7,9 +7,16 @@ int countWords(string str);
 
 int main()
 {
-	string s = "The quick brown fox jumped over the lazy dog";
-	int numWords = countWords(s);
-	cout << numWords;
+	string input;
+	while (true)
+	{
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+		if (input == "Q")
+			break;
+		int numWords = countWords(input);
+		cout << "Word count: " << numWords << endl;
+	}
 }
 
 int countWords(string str)
